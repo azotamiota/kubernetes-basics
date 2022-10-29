@@ -1,1 +1,1 @@
-# kubernetes-basics
+# K8S basics

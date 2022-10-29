@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: k8s-basics
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: k8s-basics
+  template:
+    metadata:
+      labels:
+        app: k8s-basics
+    spec:
+      containers:
+      - name: k8s-basics
+        image: azotamiota/kubernetes-basics
+        resources:
+          limits:
+            memory: "128Mi"
+            cpu: "250m"
+        ports:
+        - containerPort: 3000
